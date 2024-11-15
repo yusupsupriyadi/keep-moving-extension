@@ -7,7 +7,7 @@ let statusBarItem;
 let extensionContext;
 
 // Development configuration
-const REMINDER_INTERVAL = 5 * 60 * 1000; // 5 minutes for testing
+const REMINDER_INTERVAL = 10 * 60 * 1000; // 10 minutes for testing
 const SNOOZE_DURATION = 10 * 1000; // 10 seconds for testing
 
 function activate(context) {

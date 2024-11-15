@@ -2,7 +2,7 @@
 	"name": "keep-moving",
 	"displayName": "Keep Moving",
 	"description": "Reminds you to stand up and move every 10 minutes with a visual notification",
-	"version": "0.0.3",
+	"version": "0.0.5",
 	"publisher": "KeepMoving",
 	"icon": "icon.png",
 	"private": false,
@@ -64,7 +64,7 @@
 		"productivity"
 	],
 	"galleryBanner": {
-		"color": "#C80000",
+		"color": "#303030",
 		"theme": "dark"
 	}
 }
