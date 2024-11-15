@@ -10,12 +10,22 @@
   <img src="https://github.com/user-attachments/assets/a5a5ddb7-d77f-45a7-a64e-e9e213839071" alt="sociabuzz" width="100"/>
 </a>
 
-
 ## Key Features
-- 🕒 Automatic reminders every 10 minutes
-- 💪 Engaging visual interface with animations
-- ⏰ Snooze option to delay reminders
-- 🔄 Ability to enable/disable reminders
-- 📊 Informative status bar indicator
 
-<img src="https://github.com/user-attachments/assets/134f0efc-50e0-445a-b212-a837597115d4" alt="sociabuzz" width="300"/>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <ul>
+        <li>🕒 Automatic reminders every 10 minutes</li>
+        <li>💪 Engaging visual interface with animations</li>
+        <li>⏰ Snooze option to delay reminders</li>
+        <li>🔄 Ability to enable/disable reminders</li>
+        <li>📊 Informative status bar indicator</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/134f0efc-50e0-445a-b212-a837597115d4" alt="preview" width="100%" />
+    </td>
+  </tr>
+</table>
