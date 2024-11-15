@@ -2,7 +2,7 @@
 	"name": "keep-moving",
 	"displayName": "Keep Moving",
 	"description": "Reminds you to stand up and move every 10 minutes with a visual notification",
-	"version": "0.0.6",
+	"version": "0.0.8",
 	"publisher": "KeepMoving",
 	"icon": "icon.png",
 	"private": false,
