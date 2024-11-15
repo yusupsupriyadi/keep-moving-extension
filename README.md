@@ -17,3 +17,5 @@
 - ⏰ Snooze option to delay reminders
 - 🔄 Ability to enable/disable reminders
 - 📊 Informative status bar indicator
+
+<img src="https://github.com/user-attachments/assets/134f0efc-50e0-445a-b212-a837597115d4" alt="sociabuzz" width="300"/>
