@@ -1,4 +1,5 @@
-# 🚀 Introducing "𝗞𝗲𝗲𝗽 𝗠𝗼𝘃𝗶𝗻𝗴" - Your Healthy Coding Companion! 🧘‍♂️💻
+## Keep Moving - VSCode Extension 
+🚀 Introducing "𝗞𝗲𝗲𝗽 𝗠𝗼𝘃𝗶𝗻𝗴" - Your Healthy Coding Companion! 🧘‍♂️💻
 
 🌟 𝗪𝗵𝗮𝘁 𝗱𝗼𝗲𝘀 𝗶𝘁 𝗱𝗼? "Keep Moving" gently reminds you every 10 minutes to take a break, stand up, and stretch. It’s simple but effective in promoting a healthier lifestyle, especially during those long coding marathons. Staying active is crucial to maintaining both mental focus and physical health.
 
