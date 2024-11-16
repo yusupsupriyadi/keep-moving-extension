@@ -1,8 +1,8 @@
 {
 	"name": "keep-moving",
 	"displayName": "Keep Moving",
-	"description": "Reminds you to stand up and move every 10 minutes with a visual notification",
-	"version": "0.0.9",
+	"description": "Reminds you to stand up and move every 30 minutes with a visual notification",
+	"version": "0.1.1",
 	"publisher": "Yusupsupriyadicom",
 	"icon": "icon.png",
 	"private": false,
@@ -42,11 +42,11 @@
 		],
 		"configuration": {
 			"title": "Keep Moving",
-		"properties": {
+			"properties": {
 				"keepMoving.reminderInterval": {
 					"type": "number",
-					"default": 10,
-					"description": "Interval waktu pengingat dalam menit"
+					"default": 30,
+					"description": "Reminder time interval in minutes"
 				}
 			}
 		}

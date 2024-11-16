@@ -91,11 +91,17 @@ function toggleReminders() {
 }
 
 function updateStatusBar() {
+	const interval = vscode.workspace.getConfiguration('keepMoving').get('reminderInterval');
+	const hours = interval / 60;
+	const timeDisplay = interval >= 60 
+		? `${Number.isInteger(hours) ? Math.floor(hours) : hours.toFixed(1)}h` 
+		: `${interval}m`;
+	
 	statusBarItem.text = `$(person) ${
-		isActive ? 'Keep Moving' : 'Keep Moving (Paused)'
+		isActive ? `Keep Moving (${timeDisplay})` : 'Keep Moving (Paused)'
 	}`;
 	statusBarItem.tooltip = isActive
-		? 'Click to manage movement reminders'
+		? `Movement reminder every ${timeDisplay}. Click to manage.`
 		: 'Movement reminders are paused. Click to resume';
 }
 
@@ -148,12 +154,12 @@ function showIntervalPicker() {
 			const input = await vscode.window.showInputBox({
 				prompt: 'Enter reminder time in minutes',
 				validateInput: (value) => {
-					const num = parseInt(value);
+					const num = parseFloat(value);
 					return (!num || num < 1) ? 'Please enter a valid number greater than 0' : null;
 				}
 			});
 			if (!input) return;
-			interval = parseInt(input);
+			interval = Math.round(parseFloat(input));
 		} else {
 			interval = intervals.find(i => i.label === selected).value;
 		}
