@@ -42,7 +42,7 @@
 		],
 		"configuration": {
 			"title": "Keep Moving",
-			"properties": {
+		"properties": {
 				"keepMoving.reminderInterval": {
 					"type": "number",
 					"default": 10,

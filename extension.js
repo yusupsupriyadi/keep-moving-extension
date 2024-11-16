@@ -4,7 +4,7 @@ const NotificationPanel = require('./src/notificationPanel');
 let reminderInterval;
 let isActive = true;
 let statusBarItem;
-let extensionContext;
+let extensionContext; 
 
 // Development configuration
 const SNOOZE_DURATION = 10 * 1000; // 10 seconds for testing
