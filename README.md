@@ -1,7 +1,7 @@
 ## <img src="https://github.com/user-attachments/assets/d73e5a87-4817-44c9-930f-ee1f820c7d8d" alt="exercising" width="30"/> Keep Moving - VSCode Extension 
 🚀 Introducing "𝗞𝗲𝗲𝗽 𝗠𝗼𝘃𝗶𝗻𝗴" - Your Healthy Coding Companion! 🧘‍♂️💻
 
-🌟 𝗪𝗵𝗮𝘁 𝗱𝗼𝗲𝘀 𝗶𝘁 𝗱𝗼? "Keep Moving" gently reminds you every 10 minutes to take a break, stand up, and stretch. It’s simple but effective in promoting a healthier lifestyle, especially during those long coding marathons. Staying active is crucial to maintaining both mental focus and physical health.
+🌟 𝗪𝗵𝗮𝘁 𝗱𝗼𝗲𝘀 𝗶𝘁 𝗱𝗼? "Keep Moving" reminds you to take breaks, stand up, and stretch at customizable intervals. It's simple but effective in promoting a healthier lifestyle, especially during those long coding marathons. Staying active is crucial to maintaining both mental focus and physical health.
 
 <a href="https://buymeacoffee.com/yusupsupriyadi">
   <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="sociabuzz" width="110"/>
@@ -12,12 +12,12 @@
 
 ## Key Features
 
-
 <table>
   <tr>
     <td width="50%" valign="top">
       <ul>
-        <li>🕒 Automatic reminders every 10 minutes</li>
+        <li>⚡ Customizable reminder intervals (10min, 30min, 1hr, or custom)</li>
+        <li>🕒 Easy-to-use reminder settings</li>
         <li>💪 Engaging visual interface with animations</li>
         <li>⏰ Snooze option to delay reminders</li>
         <li>🔄 Ability to enable/disable reminders</li>

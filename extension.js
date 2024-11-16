@@ -7,7 +7,6 @@ let statusBarItem;
 let extensionContext;
 
 // Development configuration
-const REMINDER_INTERVAL = 10 * 60 * 1000; // 10 minutes for testing
 const SNOOZE_DURATION = 10 * 1000; // 10 seconds for testing
 
 function activate(context) {
@@ -55,6 +54,10 @@ function showMenu() {
 			label: 'Snooze (10 sec)',
 			description: 'Pause notifications for 10 seconds',
 		},
+		{
+			label: 'Set Reminder Time',
+			description: 'Change reminder notification interval',
+		}
 	];
 
 	vscode.window.showQuickPick(items).then((selection) => {
@@ -64,6 +67,8 @@ function showMenu() {
 			toggleReminders();
 		} else if (selection.label === 'Snooze (10 sec)') {
 			vscode.commands.executeCommand('keep-moving.snooze');
+		} else if (selection.label === 'Set Reminder Time') {
+			showIntervalPicker();
 		}
 		updateStatusBar();
 	});
@@ -103,7 +108,7 @@ function startReminders(context) {
 		if (isActive) {
 			NotificationPanel.createOrShow(context);
 		}
-	}, REMINDER_INTERVAL);
+	}, getReminderInterval());
 	updateStatusBar();
 }
 
@@ -120,6 +125,48 @@ function deactivate() {
 	if (statusBarItem) {
 		statusBarItem.dispose();
 	}
+}
+
+function getReminderInterval() {
+	const config = vscode.workspace.getConfiguration('keepMoving');
+	return config.get('reminderInterval') * 60 * 1000; // Convert menit ke milidetik
+}
+
+function showIntervalPicker() {
+	const intervals = [
+		{ label: '10 Minutes', value: 10 },
+		{ label: '30 Minutes', value: 30 },
+		{ label: '1 Hour', value: 60 },
+		{ label: 'Custom Time...', value: 'custom' }
+	];
+
+	vscode.window.showQuickPick(intervals.map(i => i.label)).then(async (selected) => {
+		if (!selected) return;
+
+		let interval;
+		if (selected === 'Custom Time...') {
+			const input = await vscode.window.showInputBox({
+				prompt: 'Enter reminder time in minutes',
+				validateInput: (value) => {
+					const num = parseInt(value);
+					return (!num || num < 1) ? 'Please enter a valid number greater than 0' : null;
+				}
+			});
+			if (!input) return;
+			interval = parseInt(input);
+		} else {
+			interval = intervals.find(i => i.label === selected).value;
+		}
+
+		await vscode.workspace.getConfiguration().update(
+			'keepMoving.reminderInterval',
+			interval,
+			true
+		);
+		
+		startReminders(extensionContext);
+		vscode.window.showInformationMessage(`Reminder interval set to ${interval} minutes`);
+	});
 }
 
 module.exports = {

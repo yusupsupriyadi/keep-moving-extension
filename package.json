@@ -2,7 +2,7 @@
 	"name": "keep-moving",
 	"displayName": "Keep Moving",
 	"description": "Reminds you to stand up and move every 10 minutes with a visual notification",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"publisher": "KeepMoving",
 	"icon": "icon.png",
 	"private": false,
@@ -34,8 +34,22 @@
 			{
 				"command": "keep-moving.snooze",
 				"title": "Keep Moving: Snooze Reminder"
+			},
+			{
+				"command": "keep-moving.setInterval",
+				"title": "Keep Moving: Set Reminder Time"
 			}
-		]
+		],
+		"configuration": {
+			"title": "Keep Moving",
+			"properties": {
+				"keepMoving.reminderInterval": {
+					"type": "number",
+					"default": 10,
+					"description": "Interval waktu pengingat dalam menit"
+				}
+			}
+		}
 	},
 	"scripts": {
 		"lint": "eslint .",
